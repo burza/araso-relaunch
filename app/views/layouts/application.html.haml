@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    %title= 'Gregor Swatek - Frontend Craftsman and Agile Design Prophet'
+    %meta{'name' => 'keywords', 'content' => 'agile, frontend, web-design, design, interface, mobile'}/
+    %meta{'name' => 'description', 'content' => 'Frontend Craftsman and Agile Design Prophet'}/
+    = stylesheet_link_tag    "application", :media => "all"
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container
+          %button.btn.btn-navbar{ 'type' => 'button', 'data-toggle' => 'collapse', 'data-target' => '.nav-collapse' }
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand{ 'href' => '#' } Agile Design
+          .nav-collapse.collapse
+            %ul.nav.pull-right
+              %li
+                %a{'href' => '#'}
+                  %i.icon-home.icon-white
+                  
+              %li.active
+                %a{'href' => '#'} Leistungen
+              %li
+                %a{'href' => '#about'} Projekte
+              %li
+                %a{'href' => '#contact'} Über mich
+              %li
+                %a{'href' => '#contact'} Kontakt
+    .container= yield
+    = javascript_include_tag "application"
+  
+
