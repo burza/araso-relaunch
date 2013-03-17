@@ -5,16 +5,29 @@
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
   */
+
+@import "compass/utilities"
+@import "compass/css3"
+//@import "compass/reset"
+
+//+global-reset
+
+@import "colors.lib"
+@import "typo.lib"
+
+@import "components"
+
+@import "home"
+
   
-body
-  font-family: 'fontinregular'
-
-h1
-  font-family: 'Alex Brush', cursive
-
-p.big
-  font:
-    family: 'Open Sans', sans-serif
-    style: italic
-    weight: 300
-  text-transform: uppercase
+.navbar-inverse .navbar-inner
+  +box-shadow(rgba(0,0,0,0.5) 0 1px 5px)
+  .nav > li > a
+    +text-shadow(0 -1px 0 rgba(0, 0, 0, 0.7))
+  .brand
+    text-indent: -2000px
+    width: 32px
+    height: 32px
+    background: transparent image-url("araso_logo_mini_inverse.png") 0 0 no-repeat
+    padding: 0
+    margin-top: 5px

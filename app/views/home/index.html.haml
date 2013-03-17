@@ -1,19 +1,63 @@
 - content_for :title, "Die Agentur"
 - content_for :meta_keywords, "Anforderungsprofil, Spielerberater, Karriereplanung, Spielerbetreuung, Hamburg, Beratung, Management"
 - content_for :meta_description, "Vision und Ziele sowie Anforderungsprofil und Grundsätze des Unternehmens."
-%div.home-intro{'style' => 'width: 100%'}
+
+%section#home
+  .container
+    .row.intro-teaser
+      .span3
+        =# link_to "bla", "#", class: "logo"
+        = image_tag("araso_logo@2x.png")
+      .span6
+        %h1 Moin moin ich heiße Gregor...
+        %p ... und bin <a href="#" class="highlight">Frontend-Engineer</a> im besten Falle <a href="#" class="highlight">Produktdesigner</a> und wenn es nicht anders geht ein <a href="#" class="highlight">Agile Design Prophet</a>. Ich konzipiere und gestalte Mobile- und Web-Applikationen mit den aktuellsten Web-Standards. Besonderen Wert lege ich auf <a href="http://www.lukew.com/ff/entry.asp?933" class="highlight" title="Mobile First (http://www.lukew.com/)">Einfachheit</a> und <a href="http://futurefriend.ly/" class="highlight" title="Zukunftssichere Denkweise (http://futurefriend.ly/)">Flexibilität</a> der Anwendung während ich mich stets auf einem agilen Pfad bewege.
+
+%section#services
   .container
     .row
-      .span4
-        = link_to "bla", "#", class: "logo"
-      .span8
-        %h1 Hey ich heiße Gregor und bin agiler Designer
+      .span12
+        %article.row
+          .service.span4
+            %h2.span3.ribbon
+              %span.ribbon-content Konzept
+            %figure.span3
+              .image-vignette= image_tag('teaser_concept2.jpg')
+              %figcaption
+                %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          .service.span4
+            %h2.span3.ribbon
+              %span.ribbon-content Design
+            %figure.span3
+              .image-vignette= image_tag('teaser_design.jpg')
+              %figcaption
+                %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          .service.span4
+            %h2.span3.ribbon
+              %span.ribbon-content Entwicklung
+            %figure.span3
+              .image-vignette= image_tag('teaser_development.jpg')
+              %figcaption
+                %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
         %p.big LOREM IPSUM DOLOR SIT AMET CONSETETUR SADIPSCING, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT UT LABORE ET DOLORE MAGNA ERAT.
-        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      
-.container
-  .row
-    .span12
-      %h1 Hey ich heiße Gregor und bin agiler Designer
-      %p.big LOREM IPSUM DOLOR SIT AMET CONSETETUR SADIPSCING, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT UT LABORE ET DOLORE MAGNA ERAT.
-      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        - 5.times do
+          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+%section#projects
+  .container
+    .row
+      .span12
+        %h1 Was ich bisher gemacht habe!
+        %p.big LOREM IPSUM DOLOR SIT AMET CONSETETUR SADIPSCING, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT UT LABORE ET DOLORE MAGNA ERAT.
+        - 5.times do
+          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+%section#about
+  .container
+    .row
+      .span12
+        %h1 Wobei kann ich Ihnen helfen?
+        %p.big LOREM IPSUM DOLOR SIT AMET CONSETETUR SADIPSCING, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT UT LABORE ET DOLORE MAGNA ERAT.
+        - 5.times do
+          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

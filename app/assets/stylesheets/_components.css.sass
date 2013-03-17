@@ -1,0 +1,45 @@
+=ribbon 
+  background: #222
+  +background-image(linear-gradient(left, #202020 0%, #2E2E2E 50%, #202020 100%))
+  +box-shadow(rgba(0,0,0,0.1) 2px 2px 0)
+  width: 50%
+  position: relative
+  color: #fff
+  text-align: center
+  padding: 0.25em 1em
+  margin: 2em auto 3em  
+  &:before, &:after 
+    content: ""
+    position: absolute
+    display: block
+    bottom: -0.3em
+    border: 1em solid #181818
+    z-index: -1
+
+  &:before 
+    left: -0.5em
+    border-right-width: 0.5em
+    border-left-width: 0.5em
+    border-left-color: transparent
+    +box-shadow(rgba(0,0,0,0.1) 2px 2px 0)
+
+  &:after 
+    right: -0.5em
+    border-left-width: 0.5em
+    border-right-width: 0.5em
+    border-right-color: transparent
+    +box-shadow(rgba(0,0,0,0.1) -2px 2px 0)
+  .ribbon-content:before, 
+  .ribbon-content:after 
+    content: ""
+    position: absolute
+    display: block
+    border-style: solid
+    border-color: #000000 transparent transparent transparent
+    bottom: -0.3em
+  .ribbon-content:before 
+    left: 0
+    border-width: 0.3em 0 0 0.5em
+  .ribbon-content:after 
+    right: 0
+    border-width: 0.3em 0.5em 0 0

@@ -10,8 +10,11 @@
     = csrf_meta_tags
     %meta{'name' => 'googlebot', 'content' => 'all,index,follow,noodp'}/
     %meta{'name' => 'viewport', 'content' => 'width=device-width, initial-scale=1.0'}/
+    %meta{'name' => 'apple-mobile-web-app-capable', 'content' => 'yes'}/
     
-    %link{'href' => 'http://fonts.googleapis.com/css?family=Alex+Brush|Open+Sans:300italic,400italic,700italic', 'rel' => 'stylesheet', 'type' => 'text/css'}
+    
+    %link{'href' => 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic', 'rel' => 'stylesheet', 'type' => 'text/css'}
+    %link{'href' => 'http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic', 'rel' => 'stylesheet', 'type' => 'text/css'}
     %link{'rel' => 'apple-touch-icon-precomposed', 'sizes' => '144x144', 'href' => image_path('icons/apple-touch-icon-144-precomposed.png')}
     %link{'rel' => 'apple-touch-icon-precomposed', 'sizes' => '114x114', 'href' => image_path('icons/apple-touch-icon-114-precomposed.png')}
     %link{'rel' => 'apple-touch-icon-precomposed', 'sizes' => '72x72', 'href' => image_path('icons/apple-touch-icon-72-precomposed.png')}
@@ -22,7 +25,7 @@
       %script{'src' => 'http://html5shiv.googlecode.com/svn/trunk/html5.js'}/
     
   %body
-    .navbar.navbar-inverse.navbar-fixed-top
+    .navbar.navbar-inverse.navbar-fixed-top.reset-navbar-styles
       .navbar-inner
         .container
           %button.btn.btn-navbar{ 'type' => 'button', 'data-toggle' => 'collapse', 'data-target' => '.nav-collapse' }
@@ -32,16 +35,16 @@
           %a.brand{ 'href' => '#' } The Agile Design Prophet
           .nav-collapse.collapse
             %ul.nav.pull-right
-              %li
-                %a{'href' => '#'}
+              %li.active
+                %a{'href' => '#home'}
                   %i.icon-home.icon-white
                   
               %li.active
-                %a{'href' => '#'} Leistungen
+                %a{'href' => '#services'} Leistungen
               %li
-                %a{'href' => '#about'} Projekte
+                %a{'href' => '#projects'} Projekte
               %li
-                %a{'href' => '#contact'} Über mich
+                %a{'href' => '#about'} Über mich
               %li
                 %a{'href' => '#contact'} Kontakt
     = yield

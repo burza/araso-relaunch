@@ -1,0 +1,76 @@
+$font-size: 16px
+$font-size-middle: 18px
+
+$line-height: $font-size-middle
+
+//@font-face
+//  font-family: 'fontinbold'
+//  src: url('/fonts/fontin/fontin-bold-webfont.eot')
+//  src: url('/fonts/fontin/fontin-bold-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/fontin/fontin-bold-webfont.woff') format('woff'), url('/fonts/fontin/fontin-bold-webfont.ttf') format('truetype'), url('/fonts/fontin/fontin-bold-webfont.svg#fontinbold') format('svg')
+//  font-weight: normal
+//  font-style: normal
+//
+//
+//@font-face
+//  font-family: 'fontinitalic'
+//  src: url('/fonts/fontin/fontin-italic-webfont.eot')
+//  src: url('/fonts/fontin/fontin-italic-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/fontin/fontin-italic-webfont.woff') format('woff'), url('/fonts/fontin/fontin-italic-webfont.ttf') format('truetype'), url('/fonts/fontin/fontin-italic-webfont.svg#fontinitalic') format('svg')
+//  font-weight: normal
+//  font-style: normal
+//
+//@font-face
+//  font-family: 'fontinregular'
+//  src: url('/fonts/fontin/fontin-regular-webfont.eot')
+//  src: url('/fonts/fontin/fontin-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/fontin/fontin-regular-webfont.woff') format('woff'), url('/fonts/fontin/fontin-regular-webfont.ttf') format('truetype'), url('/fonts/fontin/fontin-regular-webfont.svg#fontinregular') format('svg')
+//  font-weight: normal
+//  font-style: normal
+
+@font-face
+  font-family: 'StonyIsland Regular'
+  src: url('/fonts/stonin/stonin.eot')
+  src: url('/fonts/stonin/stonin.eot?#iefix') format('embedded-opentype'), url('/fonts/stonin/stonin.woff') format('woff'), url('/fonts/stonin/stonin.ttf') format('truetype'), url('/fonts/stonin/stonin.svg#stonyislandnfregular') format('svg')
+  font-weight: normal
+  font-style: normal
+
+body
+  font-family: 'Droid Serif', serif
+  font-size: $font-size
+
+h1
+  font-family: 'StonyIsland Regular', 'sans serif'
+  color: $araso-red
+  font-weight: normal
+  letter-spacing: 1px
+  font-style: italic
+
+h2
+  font-family: 'StonyIsland Regular', 'sans serif'
+  font-weight: normal
+  letter-spacing: 1px
+  font-size: $font-size + 12
+  letter-spacing: 1px
+
+.intro-teaser h1
+  font-size: $font-size * 3
+
+p.big
+  font:
+    family: 'Open Sans', sans-serif
+    style: italic
+    weight: 300
+    size: $font-size-middle
+  text-transform: uppercase
+
+.highlight
+  border-bottom: 3px double $light-blue
+  &:hover
+    border-color: $lighter-blue
+
+.intro-teaser a.highlight
+  cursor: help
+  color: white
+  text-decoration: none
+  &:hover, &:focus
+    text-decoration: none
+  &:visited
+    color: #CCC
