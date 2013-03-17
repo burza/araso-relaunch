@@ -1,12 +1,13 @@
 =ribbon 
   background: #222
+  +border-radius(2px)
   +background-image(linear-gradient(left, #202020 0%, #2E2E2E 50%, #202020 100%))
   +box-shadow(rgba(0,0,0,0.1) 2px 2px 0)
   width: 50%
   position: relative
   color: #fff
   text-align: center
-  padding: 0.25em 0.5em 0.2em
+  padding: 0.2em 0.5em 0em 0.5em
   margin: 2em auto 3em  
   &:before, &:after 
     content: ""
@@ -17,16 +18,20 @@
     z-index: -1
 
   &:before 
-    left: -0.5em
-    border-right-width: 0.5em
-    border-left-width: 0.5em
+    left: -0.8em
+    border-right-width: 0.8em
+    border-left-width: 0.8em
+    border-top-width: 0.8em
+    border-bottom-width: 0.8em
     border-left-color: transparent
     +box-shadow(rgba(0,0,0,0.1) 2px 2px 0)
 
   &:after 
-    right: -0.5em
-    border-left-width: 0.5em
-    border-right-width: 0.5em
+    right: -0.8em
+    border-left-width: 0.8em
+    border-right-width: 0.8em
+    border-top-width: 0.8em
+    border-bottom-width: 0.8em
     border-right-color: transparent
     +box-shadow(rgba(0,0,0,0.1) -2px 2px 0)
   .ribbon-content:before, 
@@ -39,7 +44,7 @@
     bottom: -0.3em
   .ribbon-content:before 
     left: 0
-    border-width: 0.3em 0 0 0.5em
+    border-width: 0.3em 0 0 0.8em
   .ribbon-content:after 
     right: 0
-    border-width: 0.3em 0.5em 0 0
+    border-width: 0.3em 0.8em 0 0
