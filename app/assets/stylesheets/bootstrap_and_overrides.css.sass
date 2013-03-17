@@ -19,9 +19,11 @@
 
 @import "home"
 
-  
+.container
+  max-width: 1000px
 .navbar-inverse .navbar-inner
-  +box-shadow(rgba(0,0,0,0.5) 0 1px 5px)
+  +box-shadow(rgba(0, 0, 0, 0.1) 0 2px 0px)
+  +single-transition(all 0.5s ease 0s)
   .nav > li > a
     +text-shadow(0 -1px 0 rgba(0, 0, 0, 0.7))
   .brand
@@ -31,3 +33,15 @@
     background: transparent image-url("araso_logo_mini_inverse.png") 0 0 no-repeat
     padding: 0
     margin-top: 5px
+
+.reset-navbar-styles.navbar-inverse .navbar-inner
+  +single-transition(all 0.5s ease 0s)
+  +box-shadow(none)
+  background: transparent
+  border-color: transparent
+  .brand
+    display: none
+.reset-navbar-styles.navbar-inverse .nav .active>a, 
+.reset-navbar-styles.navbar-inverse .nav .active>a:hover, 
+.reset-navbar-styles.navbar-inverse .nav .active>a:focus
+  background-color: transparent
