@@ -2,60 +2,17 @@
 - content_for :meta_keywords, "Anforderungsprofil, Spielerberater, Karriereplanung, Spielerbetreuung, Hamburg, Beratung, Management"
 - content_for :meta_description, "Vision und Ziele sowie Anforderungsprofil und Grundsätze des Unternehmens."
 
-%section#home
-  .container
-    .row-fluid.intro-teaser
-      .span4
-        =# link_to "bla", "#", class: "logo"
-        = image_tag("araso_logo@2x.png")
-      .span8
-        %h1 Moin moin ich heiße Gregor...
-        %p ... und bin <a href="#" class="highlight">Frontend-Engineer</a> im besten Falle <a href="#" class="highlight">Produktdesigner</a> und wenn es nicht anders geht ein <a href="#" class="highlight">Agile Design Prophet</a>. Ich konzipiere und gestalte Mobile- und Web-Applikationen mit den aktuellsten Web-Standards. Besonderen Wert lege ich auf <a href="http://www.lukew.com/ff/entry.asp?933" class="highlight" title="Mobile First (http://www.lukew.com/)">Einfachheit</a> und <a href="http://futurefriend.ly/" class="highlight" title="Zukunftssichere Denkweise (http://futurefriend.ly/)">Flexibilität</a> der Anwendung während ich mich stets auf einem agilen Pfad bewege.
+= render :partial => 'home'
 
-%section
-  .container
-    .row-fluid
-      .span12-fluid
-        %article.row-fluid
-          .service.span4
-            %h2.ribbon
-              %span.ribbon-content Konzept
-            %figure
-              .image-vignette= image_tag('teaser_concept2.jpg')
-              %figcaption
-                %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          .service.span4
-            %h2.ribbon
-              %span.ribbon-content Design
-            %figure
-              .image-vignette= image_tag('teaser_design.jpg')
-              %figcaption
-                %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          .service.span4
-            %h2.ribbon
-              %span.ribbon-content Entwicklung
-            %figure
-              .image-vignette= image_tag('teaser_development.jpg')
-              %figcaption
-                %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-        %hr/
+= render :partial => 'services_intro'
 
-%section#services
-  .container
-    .row-fluid
-      .span12
-        %article
-          %h1 Was ich bisher gemacht habe!
 
-%section#projects
-  .container
-    .row-fluid
-      .span12
-        %h1 Was ich bisher gemacht habe!
-        %p.big LOREM IPSUM DOLOR SIT AMET CONSETETUR SADIPSCING, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT UT LABORE ET DOLORE MAGNA ERAT.
-        - 5.times do
-          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+= render :partial => 'services'
+
+
+= render :partial => 'projects'
+
 
 %section#about
   .container

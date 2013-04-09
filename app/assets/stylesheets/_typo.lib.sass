@@ -36,31 +36,62 @@ body
   font-family: 'Droid Serif', serif
   font-size: $font-size
 
-h1
+=h1
   font-family: 'StonyIsland Regular', 'sans serif'
   color: $araso-red
   font-weight: normal
   letter-spacing: 1px
-  font-style: italic
+  
 
-h2
+=h2
   font-family: 'StonyIsland Regular', 'sans serif'
   font-weight: normal
   letter-spacing: 1px
   font-size: $font-size + 12
   letter-spacing: 1px
 
+=h3
+  font-family: 'StonyIsland Regular', 'sans serif'
+  font-weight: bold
+  letter-spacing: 1px
+  font-size: $font-size + 6
+
+=h4
+  font-family: 'StonyIsland Regular', 'sans serif'
+  font-weight: bold
+  font-size: $font-size-middle
+
+h1
+  +h1
+
+h2
+  +h1
+  
+h3
+  +h2
+
+h4
+  +h3
+
 .intro-teaser h1
-  font-size: $font-size * 3
+  +text-shadow(rgba(0,0,0,.4) 5px 5px 0px)
+  font:
+    size: $font-size * 3.5
+    style: italic
+  letter-spacing: 2px
 
 p.big
   font:
     family: 'Open Sans', sans-serif
-    style: italic
     weight: 300
     size: $font-size-middle
   text-transform: uppercase
-
+  line-height: 1.5em
+  
+#projects p.big
+  color: #CCC
+  margin-bottom: $line-height * 2
+  
 hr
   +box-shadow(rgba(255,255,255,.7) 0 1px 0, rgba(255,255,255,.7) 0 1px 0 inset)
   border-bottom: 1px solid rgba(0,0,0,.1)

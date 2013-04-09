@@ -1,0 +1,18 @@
+%section#projects
+  .container
+    %h1 Was ich bisher gemacht habe!
+    %p.big LOREM IPSUM DOLOR SIT AMET CONSETETUR SADIPSCING, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT UT LABORE ET DOLORE MAGNA ERAT.
+    .row-fluid
+      - 4.times do
+        .project.span3
+          .image= image_tag("http://araso.de/images/projects/rentnroll.png", :style => "border-radius:5px; width: 100%;")
+          .details
+            %a{:href => "#"} info
+    .row-fluid
+      - 4.times do
+        .project.span3
+          .image= image_tag("http://araso.de/images/projects/mylugo.png", :style => "border-radius:5px; width: 100%;")
+    .row-fluid
+      - 4.times do
+        .project.span3
+          .image= image_tag("http://araso.de/images/projects/cashbits.png", :style => "border-radius:5px; width: 100%;")
