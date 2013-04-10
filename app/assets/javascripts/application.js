@@ -32,6 +32,12 @@ $(window).scroll(function () {
 });
 
 $(document).ready(function() {
+
+  if ($(window).scrollTop() >= 40) {
+    $('.navbar').removeClass('reset-navbar-styles');    
+  }
+
+  
 	$('.navbar .nav').onePageNav({
     currentClass: 'active',
     changeHash: true,
