@@ -7,7 +7,11 @@
         .project.span3
           .image= image_tag("http://araso.de/images/projects/rentnroll.png", :style => "border-radius:5px; width: 100%;")
           .details
-            %a{:href => "#"} info
+            %a.project-link.pull-right{:href => "#"}
+              %i.icon-link.icon-white
+            %a.project-tags.pull-right{:href => "#"}
+              %i.icon-tags.icon-white
+
     .row-fluid
       - 4.times do
         .project.span3

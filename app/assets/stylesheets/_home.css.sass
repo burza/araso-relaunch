@@ -93,11 +93,14 @@
   margin-bottom: $line-height * 2
   .project
     background: rgba(0,0,0,.3)
+    +box-shadow(0 1px 0 rgba(255,255,255,.1), 0 1px 10px 1px rgba(0,0,0,.4) inset)
     +border-radius(5px)
     margin-bottom: $line-height * 2
     padding: $line-height / 2
     .image
+      +box-shadow(0 2px 0 rgba(0,0,0,0.2))
       position: relative
+      margin-bottom: $line-height / 2
       &:after
         +border-radius(5px)
         +background(radial-gradient(rgba(0,0,0,.13) 50%, rgba(0,0,0,.19) 60%, rgba(0,0,0,.3) 70%,rgba(0, 0, 0, 0.5) 95%))
@@ -109,6 +112,32 @@
         top: 0
         left: 0
         z-index: 1
+    .details
+      +pie-clearfix
+    .details a
+      +border-radius(50%)
+      +text-shadow(none)
+      +single-transition(all 0.5s ease 0s)
+      margin-left: $line-height / 2
+      color: white
+      display: inline-block
+      font-weight: normal
+      width: 24px
+      height: 24px
+      &:hover
+        text-decoration: none
+      &.project-link
+        background-color: $araso-green
+        &:hover
+          background-color: darken($araso-green,8%)
+      &.project-tags
+        background-color: $araso-red
+        &:hover
+          background-color: darken($araso-red, 8%)
+          
+      i
+        margin: 4px
+        
   .project:hover .image:after
     +background(radial-gradient(rgba(0,0,0,.08) 60%, rgba(0,0,0,.12) 70%,rgba(0, 0, 0, 0.2) 90%))
       
