@@ -35,13 +35,13 @@ $line-height: $font-size-middle
 body
   font-family: 'Droid Serif', serif
   font-size: $font-size
+  color: $font-color
 
 =h1
   font:
     family: 'StonyIsland Regular', 'sans serif'
     weight: normal
     size: $font-size * 2.5
-  color: $araso-red
   letter-spacing: 1px
   line-height: 1.5em
   margin:
@@ -84,7 +84,8 @@ h1
 
 h2
   +h1
-  +text-shadow(0px 2px 0 rgba(0, 0, 0, 0.2))
+  //+text-shadow(0px 2px 0 rgba(0, 0, 0, 0.2))
+  +text-shadow(rgb(242, 242, 242) 2px 2px 0px, lighten($font-color,50%) 4px 4px 0px)
   
 h3
   +h2
@@ -101,7 +102,23 @@ h4
   letter-spacing: 2px
   margin-top: $line-height
   color: white
-  
+
+#projects .decorative-headline > h2
+  color: white
+  +text-shadow(#3D3D3D 2px 2px 0px, #222 4px 4px 0px)
+
+//rgb(189, 78, 54)
+//+text-shadow(rgb(242, 242, 242) 2px 2px 0px, lighten($font-color,50%) 4px 4px 0px)
+.service-teaser h2.retro-head
+  +h1
+  +text-shadow(none)
+  &.red
+    color: $araso-red
+  &.blue
+    color: #617D98
+  &.green
+    color: $araso-green
+
 p.big
   font:
     family: 'Open Sans', sans-serif
@@ -109,10 +126,10 @@ p.big
     size: $font-size-middle
   text-transform: uppercase
   line-height: 1.5em
-  
-#projects p.big
-  color: #CCC
-  margin-bottom: $line-height * 2
+  &.sub-head
+    text-align: center
+    margin-bottom: $line-height * 4
+    color: #B3B3B3
   
 hr
   border-bottom: 1px solid rgba(255,255,255,0.8)
@@ -129,13 +146,16 @@ hr
 
 
 .decorative-headline
-  hr
+  margin-bottom: $line-height
+  > hr
     margin:
       top: 1.5em
       bottom: 1.5em
-  h2
+  > h2
     margin-bottom: 0
     text-align: center
+    color: $font-color
+
 .highlight
   border-bottom: 3px double $light-blue
   &:hover
