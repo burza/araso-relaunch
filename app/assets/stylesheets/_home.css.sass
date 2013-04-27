@@ -4,7 +4,8 @@
 
 
 #projects, #about, #contact, #services
-  padding-top: 80px
+  padding-top: $line-height * 6
+
 
 .image-vignette
   +border-radius(50%)
@@ -32,7 +33,8 @@
     display: inline-block
     position: relative
 
-.service-teaser
+
+.service-teaser, .portrait
   text-align: center
   margin-bottom: $line-height
   > h2
@@ -74,7 +76,6 @@
     top: $line-height * 8
     bottom: $line-height * 6
   color: white
-  margin-bottom: $line-height * 6
   p
     font:
       size: 18px
@@ -144,3 +145,9 @@
     +background(radial-gradient(rgba(0,0,0,.08) 60%, rgba(0,0,0,.12) 70%,rgba(0, 0, 0, 0.2) 90%))
       
     
+figcaption.copyright > span, figcaption.copyright > a
+  color: #CCC
+  font-size: $font-size
+  font-style: italic
+.about-me
+  line-height: 1.5em
