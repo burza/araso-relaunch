@@ -1,6 +1,9 @@
 ArasoRelaunch::Application.routes.draw do
   get "home/index"
 
+  match '#contact' => 'home#new', :as => 'contact', :via => :get
+  match '#contact' => 'home#create', :as => 'contact', :via => :post
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,5 +1,9 @@
 require File.expand_path('../boot', __FILE__)
 
+# load app_config.yml  
+require 'yaml'
+APP_CONFIG = YAML.load(File.read(File.expand_path('../app_config.yml', __FILE__)))
+
 require 'rails/all'
 
 if defined?(Bundler)
@@ -58,5 +62,19 @@ module ArasoRelaunch
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "agile-media.de",
+      :user_name            => "gregor.swatek",
+      :password             => APP_CONFIG['smtp_password'],
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+    }
+
+    config.action_mailer.default_url_options = {
+      :host => "agile-media.de"
+    }
   end
 end

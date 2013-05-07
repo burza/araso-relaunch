@@ -16,3 +16,20 @@
           %i.icon-google-plus
         = link_to "#", class: "social-contact sc-github" do
           %i.icon-github-alt
+    .row-fluid
+      = form_for Message.new, :url => contact_path do |f|
+        %fieldset.fields
+          .field
+            = f.label :name
+            = f.text_field :name, class: "span4 offset4"
+          .field
+            = f.label :email
+            = f.text_field :email
+          .field
+            = f.label :subject
+            = f.text_field :subject
+          .field
+            = f.label :body
+            = f.text_area :body
+          .form-actions
+            %button.btn.btn-primary{ :type => "submit"} Anfrage abschicken!
