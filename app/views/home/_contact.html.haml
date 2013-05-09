@@ -1,13 +1,15 @@
 %section#contact
+  #flash
+    - flash.each do |name, msg|
+      = content_tag :div, msg, :id => "flash_#{name}"
   .container
     .row-fluid.decorative-headline
       %hr.span3
       %h2.span6 Habe ich Dein Interesse geweckt?
       %hr.span3
     .row-fluid
-      %p.big.sub-head.span10.offset1 Wenn Du dir eine Zusammenarbeit vorstellen kannst dann schreibe mich einfach an!
-    .row-fluid
-      .social-contacts.span12
+      %p.big.sub-head Kannst Du dir eine Zusammenarbeit vorstellen? Dann schreibe mir eine Nachricht!
+      .social-contacts
         = link_to "#", class: "social-contact sc-twitter" do
           %i.icon-twitter
         = link_to "#", class: "social-contact sc-linkedin" do
@@ -17,19 +19,31 @@
         = link_to "#", class: "social-contact sc-github" do
           %i.icon-github-alt
     .row-fluid
-      = form_for Message.new, :url => contact_path do |f|
+      %p.or Oder aber benutze die klassische Methode ...
+      
+      =# form_for @message, :url => { :controller => "home", :action => "create" }, :method => :post do |f|
+
+      =# form_for(@message, :url => { :action => "create" , :anchor => "contact" }) do |f|
+
+      = form_for @message, :url => contact_path(@message, :anchor => 'contact') do |f|
+
         %fieldset.fields
-          .field
-            = f.label :name
-            = f.text_field :name, class: "span4 offset4"
-          .field
-            = f.label :email
-            = f.text_field :email
-          .field
-            = f.label :subject
-            = f.text_field :subject
-          .field
-            = f.label :body
-            = f.text_area :body
-          .form-actions
-            %button.btn.btn-primary{ :type => "submit"} Anfrage abschicken!
+          .field.row-fluid
+            .span6
+              = f.label :name
+              = f.text_field :name
+          .field.row-fluid
+            .span6
+              = f.label :email
+              = f.text_field :email
+          .field.row-fluid
+            .span6
+              = f.label :subject
+              = f.text_field :subject
+          .field.row-fluid
+            .span6
+              = f.label :body
+              = f.text_area :body, :rows => 4
+          .field.actions.row-fluid
+            .span6
+              %button.btn.btn-primary{ :type => "submit"}= t("helpers.label.message.submit")

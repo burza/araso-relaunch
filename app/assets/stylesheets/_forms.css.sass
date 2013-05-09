@@ -1,0 +1,43 @@
+select, textarea, input[type=text]
+  +border-radius(0px)
+  +box-shadow(0 0 0px 5px rgba(0,0,0,0.2))
+  +single-transition
+  font-family: 'Droid Serif', serif
+  font-size: $font-size-middle
+  color: $grey
+  height: auto
+  line-height: 1.7em
+  margin: 5px
+  padding: 5px
+  border: 0
+  width: 100%
+  &:focus
+    +box-shadow(0 0 0px 5px rgba(0,0,0,0.3))
+
+*:focus
+  outline: none !important
+
+button.btn.btn-primary
+  +background($dark-grey)
+  +text-shadow(0 -1px 0 rgba(0,0,0,.3))
+  +box-shadow(0 2px 0 rgba(0,0,0,.1))
+  +border-radius(0px)
+  border: 1px solid $dark-grey
+  font-family: 'Droid Serif', serif
+  font-size: $font-size-middle
+  line-height: 1.7em
+  &:hover
+    background: darken($dark-grey,5%)
+
+form#new_message label
+  font-size: $font-size-middle  
+form#new_message .field
+  margin-bottom: $line-height
+  &.actions > [class*="span"]
+    text-align: center
+form#new_message .field > [class*="span"]
+  float: none
+  margin: 0 auto
+
+form#new_message .btn.btn-primary
+  font-size: $font-size-middle

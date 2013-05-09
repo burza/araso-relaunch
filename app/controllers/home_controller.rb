@@ -1,8 +1,5 @@
 class HomeController < ApplicationController
-  def index
-  end
-
-  def new
+  def index    
     @message = Message.new
   end
 
@@ -15,6 +12,7 @@ class HomeController < ApplicationController
     else
       flash.now.alert = "Please fill all fields."
       render :index
+      # redirect_to(root_path, :anchor => "contact")
     end
   end
 
