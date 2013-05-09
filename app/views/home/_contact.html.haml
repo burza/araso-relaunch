@@ -1,7 +1,8 @@
 %section#contact
   #flash
     - flash.each do |name, msg|
-      = content_tag :div, msg, :id => "flash_#{name}"
+      = content_tag :div, :id => "flash_#{name}" do
+        %p= msg
   .container
     .row-fluid.decorative-headline
       %hr.span3
@@ -19,14 +20,13 @@
         = link_to "#", class: "social-contact sc-github" do
           %i.icon-github-alt
     .row-fluid
-      %p.or Oder aber benutze die klassische Methode ...
+      %p.or Oder benutze einfach die klassische Methode ...
       
       =# form_for @message, :url => { :controller => "home", :action => "create" }, :method => :post do |f|
 
       =# form_for(@message, :url => { :action => "create" , :anchor => "contact" }) do |f|
 
-      = form_for @message, :url => contact_path(@message, :anchor => 'contact') do |f|
-
+      = form_for @message, :url => contact_path(@message, :anchor => 'contact') do |f|        
         %fieldset.fields
           .field.row-fluid
             .span6

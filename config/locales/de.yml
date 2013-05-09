@@ -1,4 +1,9 @@
 de:
+  attributes:
+    email: E-Mail-Adresse
+    name: Vor- und Nachname
+    subject: Betreff
+    body: Nachricht
   date:
     abbr_day_names:
     - So
@@ -120,7 +125,7 @@ de:
       too_short: ist zu kurz (nicht weniger als %{count} Zeichen)
       wrong_length: hat die falsche Länge (muss genau %{count} Zeichen haben)
     template:
-      body: ! 'Bitte überprüfen Sie die folgenden Felder:'
+      body: ! 'Bitte überprüfe folgenden Felder:'
       header:
         one: ! 'Konnte %{model} nicht speichern: ein Fehler.'
         other: ! 'Konnte %{model} nicht speichern: %{count} Fehler.'
@@ -131,6 +136,12 @@ de:
       create: ! '%{model} erstellen'
       submit: ! '%{model} speichern'
       update: ! '%{model} aktualisieren'
+    message:
+      submit:
+        failed: 'Deine Nachricht konnte nicht verschickt werden. Bitte überprüfe deine Eingabe!'
+        successfull: 'Deine Nachricht wurde erfolgreich verschickt!'
+    errors:
+      header: 'Folgende Fehler sind aufgetreten:'
     label:
       message:
         name: Vor- und Nachname

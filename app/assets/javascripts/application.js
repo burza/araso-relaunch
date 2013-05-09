@@ -33,6 +33,8 @@ $(window).scroll(function () {
 
 $(document).ready(function() {
 
+  $('#flash').delay(5000).fadeOut();
+  
   if ($(window).scrollTop() >= 40) {
     $('.navbar').removeClass('reset-navbar-styles');    
   }

@@ -7,15 +7,19 @@ select, textarea, input[type=text]
   color: $grey
   height: auto
   line-height: 1.7em
-  margin: 5px
-  padding: 5px
+  margin: 1%
+  padding: 1%
   border: 0
-  width: 100%
+  width: 96%
   &:focus
     +box-shadow(0 0 0px 5px rgba(0,0,0,0.3))
 
 *:focus
-  outline: none !important
+  outline: none
+
+.field_with_errors > input,
+.field_with_errors > textarea
+  outline: 2px solid $araso-red
 
 button.btn.btn-primary
   +background($dark-grey)
@@ -26,6 +30,7 @@ button.btn.btn-primary
   font-family: 'Droid Serif', serif
   font-size: $font-size-middle
   line-height: 1.7em
+  padding: $line-height / 2 $line-height
   &:hover
     background: darken($dark-grey,5%)
 
@@ -41,3 +46,24 @@ form#new_message .field > [class*="span"]
 
 form#new_message .btn.btn-primary
   font-size: $font-size-middle
+
+#flash
+  position: fixed
+  top: 41px
+  left: 0
+  width: 100%
+  z-index: 2
+  #flash_alert
+    background-color: $araso-red
+    +box-shadow(0 2px 0 rgba(0,0,0,.1))
+  #flash_notice
+    background-color: $araso-green
+    +box-shadow(0 2px 0 rgba(0,0,0,.1))
+  p
+    color: white
+    margin: 0 auto
+    width: 75%
+    text-align: center
+    +text-shadow(none)
+    padding: $line-height 0
+    line-height: 1.5em

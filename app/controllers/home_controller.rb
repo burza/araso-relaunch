@@ -8,9 +8,9 @@ class HomeController < ApplicationController
     
     if @message.valid?
       NotificationsMailer.new_message(@message).deliver
-      redirect_to(root_path, :notice => "Message was successfully sent.")
+      redirect_to(root_path, :notice => t("helpers.message.submit.successfull"))
     else
-      flash.now.alert = "Please fill all fields."
+      flash.now.alert = t("helpers.message.submit.failed")
       render :index
       # redirect_to(root_path, :anchor => "contact")
     end
