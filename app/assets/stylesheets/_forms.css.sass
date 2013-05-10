@@ -1,7 +1,7 @@
 select, textarea, input[type=text]
   +border-radius(0px)
   +box-shadow(0 0 0px 5px rgba(0,0,0,0.2))
-  +single-transition
+  +single-transition(box-shadow, 0.5s, ease, 0s)
   font-family: 'Droid Serif', serif
   font-size: $font-size-middle
   color: $grey
@@ -18,7 +18,9 @@ select, textarea, input[type=text]
   outline: none
 
 .field_with_errors > input,
-.field_with_errors > textarea
+.field_with_errors > textarea,
+.field_with_errors > input:focus,
+.field_with_errors > textarea:focus
   outline: 2px solid $araso-red
 
 button.btn.btn-primary

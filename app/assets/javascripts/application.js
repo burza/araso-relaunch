@@ -35,6 +35,8 @@ $(document).ready(function() {
 
   $('#flash').delay(5000).fadeOut();
   
+  $('.field_with_errors > *').focus();
+  
   if ($(window).scrollTop() >= 40) {
     $('.navbar').removeClass('reset-navbar-styles');    
   }
