@@ -1,112 +1,77 @@
 %section#projects
   .container
     .row-fluid.decorative-headline
-      %hr.span3
+      %span.span3
       %h2.span6 Was ich bisher gemacht habe!
-      %hr.span3
+      %span.span3
     .row-fluid
       %p.big.sub-head.span10.offset1 Überblick über meine bisherigen Projekte und deren Umfang.
 
-    .row-fluid
-      .project.span3
-        .image= image_tag("projects/rentnroll.png")
-        .details
-          %a.project-info{:href => "#"}
-            %i.icon-info-sign.icon-white
-          %a.project-tags{:href => "#"}
-            %i.icon-tags.icon-white
-          %a.project-link{:href => "http://www.rent-n-roll.de/"}
-            %i.icon-link.icon-white
+    
+    %ul.projects
+      .row-fluid
+        %li.project.span3
+          %a{:href => "http://www.rent-n-roll.de/"}
+            .image= image_tag("projects/rentnroll.png")
+            .zoom-in
+              %i.icon-search
 
-      .project.span3
-        .image= image_tag("projects/rentnroll_mobile.png")
-        .details
-          %a.project-info{:href => "#"}
-            %i.icon-info-sign.icon-white
-          %a.project-tags{:href => "#"}
-            %i.icon-tags.icon-white
-          %a.project-link{:href => "http://itunes.apple.com/de/app/rentnroll-mobile/id431236473?mt=8"}
-            %i.icon-link.icon-white
+        %li.project.span3
+          %a{:href => "http://itunes.apple.com/de/app/rentnroll-mobile/id431236473?mt=8"}
+            .image= image_tag("projects/rentnroll_mobile.png")
+            .zoom-in
+              %i.icon-search
 
-      .project.span3
-        .image= image_tag("projects/mindmatters.png")
-        .details
-          %a.project-info{:href => "#"}
-            %i.icon-info-sign.icon-white
-          %a.project-tags{:href => "#"}
-            %i.icon-tags.icon-white
-          %a.project-link{:href => "http://www.mindmatters.de/"}
-            %i.icon-link.icon-white
+        %li.project.span3
+          %a{:href => "http://www.mindmatters.de/"}
+            .image= image_tag("projects/mindmatters.png")
+            .zoom-in
+              %i.icon-search
 
-      .project.span3
-        .image= image_tag("projects/mikestar.png")
-        .details
-          %a.project-info{:href => "#"}
-            %i.icon-info-sign.icon-white
-          %a.project-tags{:href => "#"}
-            %i.icon-tags.icon-white
-          %a.project-link{:href => "http://www.mikestar.de/"}
-            %i.icon-link.icon-white
 
-    .row-fluid
-      .project.span3
-        .image= image_tag("projects/annikahirsch.png")
-        .details
-          %a.project-info{:href => "#"}
-            %i.icon-info-sign.icon-white
-          %a.project-tags{:href => "#"}
-            %i.icon-tags.icon-white
-          %a.project-link{:href => "http://www.annikahirsch.de/"}
-            %i.icon-link.icon-white
+        %li.project.span3
+          %a{:href => "http://www.mikestar.de/"}
+            .image= image_tag("projects/mikestar.png")
+            .zoom-in
+              %i.icon-search
 
-      .project.span3
-        .image= image_tag("projects/mittagsplaner.png")
-        .details
-          %a.project-info{:href => "#"}
-            %i.icon-info-sign.icon-white
-          %a.project-tags{:href => "#"}
-            %i.icon-tags.icon-white
-          %a.project-link{:href => "http://www.mittagsplaner.de/"}
-            %i.icon-link.icon-white
+      .row-fluid
+        %li.project.span3
+          %a{:href => "http://www.annikahirsch.de/"}
+            .image= image_tag("projects/annikahirsch.png")
+            .zoom-in
+              %i.icon-search
 
-      .project.span3
-        .image= image_tag("projects/67rockwell.png")
-        .details
-          %a.project-info{:href => "#"}
-            %i.icon-info-sign.icon-white
-          %a.project-tags{:href => "#"}
-            %i.icon-tags.icon-white
-          %a.project-link{:href => "http://www.67rockwell.de/"}
-            %i.icon-link.icon-white
 
-      .project.span3
-        .image= image_tag("projects/cashbits.png")
-        .details
-          %a.project-info{:href => "#"}
-            %i.icon-info-sign.icon-white
-          %a.project-tags{:href => "#"}
-            %i.icon-tags.icon-white
-          %a.project-link{:href => "http://www.cashbits.de/"}
-            %i.icon-link.icon-white
+        %li.project.span3
+          %a{:href => "http://www.mittagsplaner.de/"}
+            .image= image_tag("projects/mittagsplaner.png")
+            .zoom-in
+              %i.icon-search
 
-    .row-fluid
-      .project.span3
-        .image= image_tag("projects/mylugo.png")
-        .details
-          %a.project-info{:href => "#"}
-            %i.icon-info-sign.icon-white
-          %a.project-tags{:href => "#"}
-            %i.icon-tags.icon-white
-          %a.project-link{:href => "http://www.mylugo.de/"}
-            %i.icon-link.icon-white
+        %li.project.span3
+          %a{:href => "http://www.67rockwell.de/"}
+            .image= image_tag("projects/67rockwell.png")
+            .zoom-in
+              %i.icon-search
 
-      .project.span3
-        .image= image_tag("projects/vileda.png")
-        .details
-          %a.project-info{:href => "#"}
-            %i.icon-info-sign.icon-white
-          %a.project-tags{:href => "#"}
-            %i.icon-tags.icon-white
-          %a.project-link{:href => "http://www.vileda.de/"}
-            %i.icon-link.icon-white
+        %li.project.span3
+          %a{:href => "http://www.cashbits.de/"}
+            .image= image_tag("projects/cashbits.png")
+            .zoom-in
+              %i.icon-search
+
+      .row-fluid
+        %li.project.span3
+          %a{:href => "http://www.mylugo.de/"}
+            .image= image_tag("projects/mylugo.png")
+            .zoom-in
+              %i.icon-search
+
+        %li.project.span3
+          %a{:href => "http://www.vileda.de/"}  
+            .image= image_tag("projects/vileda.png")
+            .zoom-in
+              %i.icon-search
+
 

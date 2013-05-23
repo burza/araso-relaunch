@@ -33,6 +33,16 @@ $(window).scroll(function () {
 
 $(document).ready(function() {
 
+	$(function() {
+
+		$('.projects li.project ').each( function() { $(this).hoverdir({
+			hoverDelay : 75
+		}); } );
+
+	});
+
+
+
   $('#flash').delay(5000).fadeOut();
   
   $('.field_with_errors > *').focus();

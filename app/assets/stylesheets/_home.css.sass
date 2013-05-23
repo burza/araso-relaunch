@@ -95,18 +95,47 @@
   .project
     background: rgba(0,0,0,.3)
     +box-shadow(0 1px 0 rgba(255,255,255,.1), 0 1px 10px 1px rgba(0,0,0,.4) inset)
-    +border-radius(5px)
+    +border-radius(10px)
+    +border-top-left-radius(0px)
+    +border-bottom-right-radius(0px)
     margin-bottom: $line-height * 2
     padding: $line-height / 2
+    position: relative
+    overflow: hidden
+    .zoom-in
+      position: absolute
+      width: 100%
+      height: 100%
+      text-align: center
+      z-index: 2
+      > i
+        width: 64px
+        height: 64px
+        +border-radius(50%)
+        +background(darken($araso-green, 5%))
+        +text-shadow(0 2px 0 rgba(0,0,0,.2))
+        color: white
+        +box-shadow(0 0 0px 10px rgba(0, 0, 0, 0.6))
+        margin-top: 74px
+        display: inline-block
+        font-size: 32px
+        line-height: 64px
+        &:hover
+          +background(darken($araso-green, 7%))
+          +text-shadow(none)
+        
     .image
       +box-shadow(0 2px 0 rgba(0,0,0,0.2))
       position: relative
-      margin-bottom: $line-height / 2
       > img
         width: 100%
-        +border-radius(5px)
+        +border-radius(10px)
+        +border-top-left-radius(0px)
+        +border-bottom-right-radius(0px)
       &:after
-        +border-radius(5px)
+        +border-radius(10px)
+        +border-top-left-radius(0px)
+        +border-bottom-right-radius(0px)
         +background(radial-gradient(rgba(0,0,0,.13) 50%, rgba(0,0,0,.19) 60%, rgba(0,0,0,.3) 70%,rgba(0, 0, 0, 0.5) 95%))
         +single-transition(all 0.5s ease 0s)
         content: ""
@@ -116,30 +145,6 @@
         top: 0
         left: 0
         z-index: 1
-    .details
-      +pie-clearfix
-      text-align: center
-    .details a
-      +border-radius(50%)
-      +text-shadow(none)
-      +single-transition(all 0.3s ease 0s)
-      margin: 0 $line-height / 2
-      color: #CCC
-      display: inline-block
-      font-weight: normal
-      width: 24px
-      height: 24px
-      &:hover
-        text-decoration: none
-        color: white
-      &.project-info:hover
-        background-color: #657696
-      &.project-link:hover
-        background-color: $araso-green
-      &.project-tags:hover
-        background-color: $araso-red
-      i
-        margin: 4px 5px
         
   .project:hover .image:after
     +background(radial-gradient(rgba(0,0,0,.08) 60%, rgba(0,0,0,.12) 70%,rgba(0, 0, 0, 0.2) 90%))
@@ -149,7 +154,7 @@
   margin-bottom: $line-height * 2
       
 #contact
-  +text-shadow(1px 1px 0 rgba(255,255,255,0.6))
+  //+text-shadow(1px 1px 0 rgba(255,255,255,0.6))
   +box-shadow(rgba(0,0,0,0.5) 0 0px 10px inset)
   background: #2b3447 image-url("pattern/new/bedge_grunge.png") 0 0 repeat
   padding-bottom: $line-height * 4
