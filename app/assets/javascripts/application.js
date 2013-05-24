@@ -23,22 +23,21 @@
 //     window.scrollTo(0, 1);
 //   }, 0);
 // });
-$(window).scroll(function () {
-  if($(this).scrollTop() == 0) {
-    $('.navbar').addClass('reset-navbar-styles');
-  } else if ($(this).scrollTop() >= 40) {
-    $('.navbar').removeClass('reset-navbar-styles');    
-  }
-});
 
 $(document).ready(function() {
 
-	$(function() {
+  $(window).scroll(function () {
+    if($(this).scrollTop() == 0) {
+      $('.navbar').addClass('reset-navbar-styles');
+    } else if ($(this).scrollTop() >= 40) {
+      $('.navbar').removeClass('reset-navbar-styles');    
+    }
+  });
 
+	$(function() {
 		$('.projects li.project ').each( function() { $(this).hoverdir({
 			hoverDelay : 75
 		}); } );
-
 	});
 
 

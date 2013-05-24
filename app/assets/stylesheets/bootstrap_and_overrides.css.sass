@@ -23,15 +23,20 @@
 
 .container
   max-width: 1000px
+
+
+.navbar-inverse .nav > li > a, .navbar-inverse .navbar-inner
+  +single-transition(all, 0.25s, ease, 0s)
+
 .navbar-inverse .navbar-inner
   +box-shadow(rgba(0, 0, 0, 0.1) 0 2px 0px)
-  +single-transition(all 0.5s ease 0s)
+
 .navbar-inverse
   .nav > li > a
     +text-shadow(0 2px 0 rgba(0, 0, 0, 0.7))
     color: #CCC
     font-weight: normal
-    
+    padding: $line-height $line-height
   .brand
     text-indent: -2000px
     width: 32px
@@ -43,15 +48,22 @@
       left: 0px
 
 .reset-navbar-styles.navbar-inverse .navbar-inner
-  +single-transition(all 0.5s ease 0s)
   +box-shadow(none)
   background: transparent
   border-color: transparent
   .brand
     display: none
 
+.reset-navbar-styles.navbar-inverse .nav > li > a
+  padding: $line-height * 3 $line-height
+
 .reset-navbar-styles.navbar-inverse .nav .active>a, 
 .reset-navbar-styles.navbar-inverse .nav .active>a:hover, 
 .reset-navbar-styles.navbar-inverse .nav .active>a:focus
   background-color: transparent
   box-shadow: none
+  
+.navbar-inverse .nav .active > a, 
+.navbar-inverse .nav .active > a:hover, 
+.navbar-inverse .nav .active > a:focus
+  background-color: transparent
