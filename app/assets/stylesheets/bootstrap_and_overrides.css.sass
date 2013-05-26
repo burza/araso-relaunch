@@ -46,6 +46,7 @@
   padding: $line-height
   &:hover
     color: white
+    background: transparent
 .navbar .brand
   font-size: 32px
   height: 52px
@@ -65,13 +66,12 @@
 .reset-navbar-styles .nav > li > a
   padding: $line-height * 3 $line-height
 
-.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus
-  background-color: rgba($araso-blue,.5)
-  color: white
-.reset-navbar-styles.navbar .nav > .active > a, .reset-navbar-styles.navbar.navbar .nav > .active > a:hover, .reset-navbar-styles.navbar.navbar .nav > .active > a:focus,
-.nav .active > a, .nav .active > a:hover, .nav .active > a:focus
+.navbar .nav > .active > a, 
+.navbar .nav > .active > a:hover, 
+.navbar .nav > .active > a:focus,
   background-color: transparent
-  +box-shadow(none)
+  color: white
+  
 
 .navbar .btn-navbar
   +box-shadow(none)
@@ -90,6 +90,8 @@
   &:hover, &:focus, &:active, &.active, &.disabled, &[disabled]
     background-color: $araso-blue
 
+.nav-collapse .nav
+  margin-bottom: 0
 
 /* Large desktop */
 @media (min-width: 1200px)
@@ -118,11 +120,24 @@
     position: fixed
   .navbar .nav > li > a span.hidden-desktop
     display: inline-block !important
-
+  .nav-collapse, .nav-collapse.collapse
+    display: inline
+    overflow: hidden
+  .navbar .nav > li > a span.hidden-desktop
+    display: none !important
+    
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px)
-  section#home
-    padding-top: $line-height * 2
+  section#home, section#services, section#projects, section#about, section#contact
+    padding:
+      top: $line-height * 2
+      left: 20px
+      right: 20px
+    margin:
+      left: -20px
+      right: -20px
+  .navbar-fixed-top
+    margin-bottom: 0
   .navbar-fixed-top .navbar-inner, 
   .navbar-fixed-bottom .navbar-inner
     padding: 0
@@ -151,6 +166,11 @@
     display: block
   .home-icon
     text-indent: 0  
+  .navbar .nav > .active > a, 
+  .navbar .nav > .active > a:hover, 
+  .navbar .nav > .active > a:focus
+    background-color: rgba($araso-blue,.5)
+    color: white
 
 /* Landscape phones and down */
 @media (max-width: 480px)
