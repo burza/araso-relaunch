@@ -25,45 +25,132 @@
   max-width: 1000px
 
 
-.navbar-inverse .nav > li > a, .navbar-inverse .navbar-inner
+.navbar .nav > li > a, .navbar-inner *
   +single-transition(all, 0.25s, ease, 0s)
 
-.navbar-inverse .navbar-inner
+.navbar-inner,
+.navbar-fixed-top .navbar-inner, 
+.navbar-static-top .navbar-inner
   +box-shadow(rgba(0, 0, 0, 0.1) 0 2px 0px)
+  background:
+    image: image-url("pattern/blackorchid.png")
+    repeat: repeat
+    color: #222222
+  border: none
 
-.navbar-inverse
-  .nav > li > a
-    +text-shadow(0 2px 0 rgba(0, 0, 0, 0.7))
-    color: #CCC
-    font-weight: normal
-    padding: $line-height $line-height
-  .brand
-    text-indent: -2000px
-    width: 32px
-    height: 32px
-    background: transparent image-url("araso_logo_mini_inverse.png") 0 0 no-repeat
-    padding: 0
-    margin:
-      top: 5px
-      left: 0px
 
-.reset-navbar-styles.navbar-inverse .navbar-inner
+.navbar .nav > li > a
+  +text-shadow(none)
+  color: #CCC
+  font-weight: normal
+  padding: $line-height
+  &:hover
+    color: white
+.navbar .brand
+  font-size: 32px
+  height: 52px
+  line-height: 59px
+  padding: 0 20px
+  margin: 0
+  font-family: "StonyIsland Regular","sans serif"
+  +text-shadow(none)
+  color: white
+
+.reset-navbar-styles .navbar-inner
   +box-shadow(none)
   background: transparent
   border-color: transparent
   .brand
     display: none
-
-.reset-navbar-styles.navbar-inverse .nav > li > a
+.reset-navbar-styles .nav > li > a
   padding: $line-height * 3 $line-height
 
-.reset-navbar-styles.navbar-inverse .nav .active>a, 
-.reset-navbar-styles.navbar-inverse .nav .active>a:hover, 
-.reset-navbar-styles.navbar-inverse .nav .active>a:focus
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus
+  background-color: rgba($araso-blue,.5)
+  color: white
+.reset-navbar-styles.navbar .nav > .active > a, .reset-navbar-styles.navbar.navbar .nav > .active > a:hover, .reset-navbar-styles.navbar.navbar .nav > .active > a:focus,
+.nav .active > a, .nav .active > a:hover, .nav .active > a:focus
   background-color: transparent
-  box-shadow: none
-  
-.navbar-inverse .nav .active > a, 
-.navbar-inverse .nav .active > a:hover, 
-.navbar-inverse .nav .active > a:focus
-  background-color: transparent
+  +box-shadow(none)
+
+.navbar .btn-navbar
+  +box-shadow(none)
+  background:
+    color: #444444
+    image: none
+    repeat: repeat-x
+  border: none
+  color: #FFFFFF
+  float: right
+  font-size: 32px
+  line-height: 52px
+  margin-left: 0px
+  margin-right: 0px
+  padding: 0 20px
+  &:hover, &:focus, &:active, &.active, &.disabled, &[disabled]
+    background-color: $araso-blue
+
+
+/* Large desktop */
+@media (min-width: 1200px)
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px)
+  .navbar-fixed-top .navbar-inner, 
+  .navbar-fixed-bottom .navbar-inner
+    padding: 0
+  .navbar .nav
+    display: block
+  .navbar .btn-navbar,
+  .reset-navbar-styles .navbar-inner .brand
+    display: none
+  .navbar .nav-collapse .nav.pull-right
+    float: right
+    margin-right: 10px
+  .nav-collapse, .nav-collapse.collapse
+    height: auto
+    overflow: visible
+  .nav-collapse .nav > li
+    float: left
+  .navbar-fixed-top
+    margin-bottom: 0
+  .navbar-fixed-top, .navbar-fixed-bottom
+    position: fixed
+  .navbar .nav > li > a span.hidden-desktop
+    display: inline-block !important
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px)
+  section#home
+    padding-top: $line-height * 2
+  .navbar-fixed-top .navbar-inner, 
+  .navbar-fixed-bottom .navbar-inner
+    padding: 0
+  .navbar .nav > li > a span.hidden-desktop
+    display: inline-block !important
+  .reset-navbar-styles .navbar-inner,
+  .reset-navbar-styles.navbar-fixed-top .navbar-inner, 
+  .reset-navbar-styles.navbar-static-top .navbar-inner
+    +box-shadow(rgba(0, 0, 0, 0.1) 0 2px 0px)
+    background:
+      image: image-url("pattern/blackorchid.png")
+      repeat: repeat
+      color: #222222
+    border: none
+  .navbar .nav > li > a,
+  .reset-navbar-styles .nav > li > a
+    padding: $line-height $line-height
+    border-bottom: 1px dotted $araso-blue
+    +box-shadow(inset 0 0px 10px rgba(0, 0, 0, 0.6))
+    +border-radius(0)
+    margin-bottom: 0
+    background: #111
+    &:hover
+      background-color: $araso-blue
+  .reset-navbar-styles .navbar-inner .brand
+    display: block
+  .home-icon
+    text-indent: 0  
+
+/* Landscape phones and down */
+@media (max-width: 480px)

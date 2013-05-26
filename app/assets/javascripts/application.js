@@ -29,7 +29,7 @@ $(document).ready(function() {
   $(window).scroll(function () {
     if($(this).scrollTop() == 0) {
       $('.navbar').addClass('reset-navbar-styles');
-    } else if ($(this).scrollTop() >= 40) {
+    } else if ($(this).scrollTop() >= 20) {
       $('.navbar').removeClass('reset-navbar-styles');    
     }
   });
@@ -46,7 +46,7 @@ $(document).ready(function() {
   
   $('.field_with_errors > *').focus();
   
-  if ($(window).scrollTop() >= 40) {
+  if ($(window).scrollTop() >= 20) {
     $('.navbar').removeClass('reset-navbar-styles');    
   }
 
