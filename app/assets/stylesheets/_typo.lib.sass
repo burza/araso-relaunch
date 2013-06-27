@@ -34,45 +34,47 @@ $line-height: $font-size-middle
 
 body
   //font-family: 'Droid Serif', serif
-  font-family: Merriweather, Georgia, Times, serif
+  font-family: 'Merriweather', Georgia, Times, serif
   font-size: $font-size
   color: $font-color
 
 =h1
   font:
-    family: 'StonyIsland Regular', 'sans serif'
-    weight: normal
+    family: 'Source Sans Pro', 'sans serif'
+    weight: 600
     size: $font-size * 2.5
   letter-spacing: 1px
   line-height: 1.5em
+  text-transform: uppercase
   margin:
     top: 0
     bottom: $line-height
   
 
 =h2
-  font-family: 'StonyIsland Regular', 'sans serif'
-  font-weight: normal
-  letter-spacing: 1px
+  font-family: 'Source Sans Pro', 'sans serif'
+  font-weight: 600
+  letter-spacing: 0px
   font-size: $font-size * 1.7
-  letter-spacing: 1px
   line-height: 1.5em
+  text-transform: uppercase
   margin:
     top: 0
     bottom: $line-height
 
 =h3
-  font-family: 'StonyIsland Regular', 'sans serif'
+  font-family: 'Source Sans Pro', 'sans serif'
   font-weight: bold
-  letter-spacing: 1px
+  letter-spacing: 0px
   font-size: $font-size * 1.4
   line-height: 1.3em
+  text-transform: uppercase
   margin:
     top: 0
     bottom: $line-height
 
 =h4
-  font-family: 'StonyIsland Regular', 'sans serif'
+  font-family: 'Source Sans Pro', 'sans serif'
   font-weight: bold
   font-size: $font-size-middle
   line-height: 1.3em
@@ -86,8 +88,8 @@ h1
 h2
   +h1
   //+text-shadow(0px 2px 0 rgba(0, 0, 0, 0.2))
-  +text-shadow(rgb(242, 242, 242) 1px 1px 0px, lighten($font-color,50%) 2px 3px 0px)
-  
+  //+text-shadow(rgb(242, 242, 242) 1px 1px 0px, lighten($font-color,50%) 2px 3px 0px)
+  font-size: 30px
 h3
   +h2
 
@@ -95,22 +97,24 @@ h4
   +h3
 
 //+text-shadow(rgb(45, 53, 72) 2px 2px 0px,rgb(160, 73, 55) 4px 4px 0px,rgb(255, 199, 187) 0px -1px 0px)
+//+text-shadow(rgb(45, 53, 72) 2px 2px 0px,rgb(236, 97, 68) 4px 4px 0px)
+
 .intro-teaser h1
-  +text-shadow(rgb(45, 53, 72) 2px 2px 0px,rgb(236, 97, 68) 4px 4px 0px)
+  +text-shadow(rgb(45, 53, 72) 2px 2px 0px,rgba(0, 0, 0, .5) 4px 4px 0px)
   font:
-    size: $font-size * 3.5
-    style: italic
-  letter-spacing: 2px
+    size: $font-size * 3
+  letter-spacing: 0px
+  text-transform: uppercase
   margin-top: $line-height
   color: white
 
 #projects .decorative-headline > h2
   color: white
-  +text-shadow(#3D3D3D 2px 2px 0px, #222 4px 4px 0px)
+  //+text-shadow(#3D3D3D 2px 2px 0px, #222 4px 4px 0px)
 
 #contact .decorative-headline 
   > h2
-    +text-shadow(#DEDAD2 2px 2px 0px, rgba(0,0,0,.2) 4px 4px 0px)
+    //+text-shadow(#DEDAD2 2px 2px 0px, rgba(0,0,0,.2) 4px 4px 0px)
   > hr
     border-bottom: 1px solid rgba(255, 255, 255, 0.5)
     border-top: 1px solid rgba(0, 0, 0, 0.2)
@@ -123,6 +127,8 @@ h4
 .service-teaser h2.retro-head
   +h1
   +text-shadow(none)
+  font-weight: 300
+  font-size: 32px
   &.red
     color: $araso-red
   &.blue
@@ -135,7 +141,7 @@ p.big
     family: 'Open Sans', sans-serif
     weight: 300
     size: $font-size-middle
-  text-transform: uppercase
+  text-transform: normal
   line-height: 1.5em
   &.sub-head
     text-align: center
@@ -166,6 +172,7 @@ hr
   > span
     border-bottom: 4px double #BFBFBF
     border-bottom: 4px double rgba(0, 0, 0, 0.2)
+    min-height: 1.7em !important
   > h2
     margin-bottom: 0
     text-align: center
